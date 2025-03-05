@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerodha Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .price {
+            font-size: 50px;
+            font-weight: bold;
+            color: #f4a62a;
+            position: relative;
+        }
+        .price::before {
+            content: "₹";
+            font-size: 20px;
+            position: absolute;
+            left: -15px;
+            top: 5px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .desc {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zerodha Pricing</h1>
+    <div class="container">
+        <div class="card">
+            <div class="price">0</div>
+            <div class="title">Free equity delivery</div>
+            <div class="desc">All equity delivery investments (NSE, BSE), are absolutely free — ₹ 0 brokerage.</div>
+        </div>
+        <div class="card">
+            <div class="price">20</div>
+            <div class="title">Intraday and F&O trades</div>
+            <div class="desc">Flat ₹ 20 or 0.03% (whichever is lower) per executed order on intraday trades across equity, currency, and commodity trades. Flat ₹20 on all option trades.</div>
+        </div>
+        <div class="card">
+            <div class="price">0</div>
+            <div class="title">Free direct MF</div>
+            <div class="desc">All direct mutual fund investments are absolutely free — ₹ 0 commissions & DP charges.</div>
+        </div>
+    </div>
+</body>
+</html>
