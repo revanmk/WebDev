@@ -3,9 +3,9 @@ section 1:-
 Problem - 1:
 
 When we run the program, the output is:
-Console.Log (Counter ()) => Output is 1
-Console.Log (Counter ()) => Output 2 is
-Console.Log (Counterb ()) => Output is 1
+console.log (Counter ()) => Output is 1
+console.log (Counter ()) => Output is 2
+console.log (Counter ()) => Output is 1
 
 Both counters, counters and counters are independent of each other. Due to the closure, each counter maintains that it is our count variable that is called the function every time, thus makes them independent.
 
@@ -36,18 +36,18 @@ When we use "late" or "cast" instead of "var" in the program, the variable is st
 
 part 2:
 
-1) In JS, "it" refers to the object that is calling the function. Since, the function inside the settimeout is not an object, it returns to be undefined.
+1) In JS, "this" refers to the object that is calling the function. Since, the function inside the settimeout is not an object, it returns to be undefined.
 
-2) The variable resolves the problem "it" in itself, as it never changes, and the user refers to the object.
+2) The variable resolves the problem "this" in itself, as it never changes, and the user refers to the object.
 
-3) In arrow functions, the value of "this" is inherited from the place they define. So here, in gumdelayed (), this.name user refers to the object correctly.
+3) In arrow functions, the value of "this" is inherited from the place they define. So here, in greetdelayed (), this.name user refers to the object correctly.
     
 4) Using arrows
 const userDelayed = {
-    name: "Revan",
+    name: "RevanMk",
     greetUser: function() {
         setTimeout(() => { 
-        console.log(`The highlord of NightCourt is: ${this.name}!`);
+        console.log(`My name is: ${this.name}!`);
         }, 4000);
     }
     };
